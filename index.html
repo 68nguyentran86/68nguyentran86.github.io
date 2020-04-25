@@ -2,22 +2,34 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
 <head>
-    <title>STREAM PEERJS</title>
+    <title>STREAM PEERJS SOCKET.IO</title>
 </head>
 
 <body>
-    <h1> Stream PeerJS </h1>
-    <h3 id='peer-id'>My PeerId:</h3>
- <!--  <h5>My Video</h5> -->
-    <video id='localstream' width=400 control></video>
-    <br /><br />
-    <h5>Friend's Video</h5>
-    <video id='friendstream' width=400 control></video>
-    <br /><br />
-
-    <input type='text' placeholder="Your friend's Peer Id" id='txtFriendId'>
-    <br />
-    <button id='btnCall'>Call</button>
+    <h1> Stream PeerJS Socket.Io </h1>
+    <div id="list-chat">
+        <p>Online user:</p>
+        <ul id="ulUser">
+        </ul>
+    </div>
+    <div id='div-local'>
+        <lable id='local-peer-id'></lable>
+        <video id='localstream' width=1 control></video>
+    </div>
+    <div id = 'remote-video'>
+        <h5 id='friend-name-video'></h5>
+        <video id='friendstream' width=500 control></video>
+    </div>
+    <div id ='div-call'>
+        <input type='text' placeholder="Your friend's Peer Id" id='txtFriendId' style='width: 150px'>
+        <br />
+        <button id='btnCall' style='width: 150px'>Call</button>
+    </div>
+    <div id="div-dang-ky">
+        <br /><br />
+        <input type="text" id="txtUsername" placeholder="Enter your username">
+        <button id="btnSignUp">Sign Up</button>
+    </div>
 </body>
 
 <script src='dist/bundle.js'></script>
